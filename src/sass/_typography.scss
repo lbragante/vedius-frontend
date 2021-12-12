@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
+@import '../sass/colors';
+
+h1,
+h2,
+h3,
+.card-title {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold !important;
+    color: $primary;
+}
+
+$font-size-base: 1.2rem !default;

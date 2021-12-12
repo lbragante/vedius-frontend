@@ -1,0 +1,9 @@
+@import '../sass/colors';
+
+$card-border-color: none !default;
+$card-spacer-y: 1.1rem !default;
+$card-spacer-x: 2.1rem !default;
+
+.card {
+    border-bottom: 3px solid rgba($primary, .3);
+}

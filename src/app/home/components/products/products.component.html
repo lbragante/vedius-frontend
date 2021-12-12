@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+
+<div class="container animated fadeIn">
+    <h1 class="mb-4">Produtos</h1>
+
+    <section>
+        <ng-container *ngIf="(products$ | async)?.length > 0; else noProducts">
+
+            <div class="row">
+                <div class="col-xl-4 col-sm-6 mb-3" *ngFor="let product of (products$ | async)">
+                    <div class="card">
+                        <img [src]="product.image" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <span class="card-text"><small class="text-muted">{{ product.category }}</small></span>
+                            <h5 class="card-title">{{ product.title }}</h5>
+                            <p class="card-text">{{ product.description }}</p>
+                            <button type="button" class="btn btn-secondary btn-block" (click)="addCart(product)">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-template #noProducts>
+            <h4 class="text-center">Não há produtos :(</h4>
+        </ng-template>
+    </section>
+</div>
